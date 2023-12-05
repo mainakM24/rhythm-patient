@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="topBar">
+
+    <item android:id="@+id/logOut"
+        android:title="@string/toolbar_logOut"
+        android:icon="@drawable/baseline_person_24"
+        android:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource">
+        <menu>
+            <item
+                android:id="@+id/logOutMenu"
+                android:title="@string/toolbar_logOut"
+                />
+            <item
+                android:id="@+id/changePasswordMenu"
+                android:title="@string/toolbar_changePass"
+                />
+        </menu>
+    </item>
+
+</menu>

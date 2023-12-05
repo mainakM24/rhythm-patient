@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfDownload">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pdfCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Details"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="10dp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <TableLayout
+                        android:id="@+id/pdfTableColoumn1"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_id"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_name"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_dob"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_gender"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_street"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_mobile"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_patient_email"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+
+                    </TableLayout>
+                    <TableLayout
+                        android:id="@+id/pdfTableColoumn2"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/pdf_table_medical_history"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_doctor_s_name"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_hospital"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_hospital_id"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_admission_date"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/table_device_id"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text="@string/report_duration"/>
+                            <TextView android:padding="5dp" android:textSize="12sp" android:textColor="@color/black" android:text=" "/>
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"/>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/downloadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Download"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
